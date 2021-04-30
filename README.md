@@ -1,1 +1,1 @@
-# MVNutritionist Project.
+# MVNutritionist
