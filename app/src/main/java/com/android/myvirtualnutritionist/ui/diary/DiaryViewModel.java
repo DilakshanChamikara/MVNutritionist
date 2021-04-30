@@ -1,16 +1,16 @@
-package com.android.myvirtualnutritionist.ui.dashboard;
+package com.android.myvirtualnutritionist.ui.diary;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class DiaryViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public DiaryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is DIARY fragment");
     }
 
     public LiveData<String> getText() {

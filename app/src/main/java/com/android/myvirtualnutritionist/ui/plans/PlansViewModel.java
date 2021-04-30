@@ -1,16 +1,16 @@
-package com.android.myvirtualnutritionist.ui.home;
+package com.android.myvirtualnutritionist.ui.plans;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class PlansViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public PlansViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is HOME fragment");
+        mText.setValue("This is PLANS fragment");
     }
 
     public LiveData<String> getText() {
