@@ -25,7 +25,8 @@
 
     <fragment
         android:id="@+id/navigation_me"
-        android:name="com.android.myvirtualnutritionist.ui.plans.PlansFragment"
+        android:name="com.android.myvirtualnutritionist.ui.me.MeFragment"
         android:label="@string/title_me"
-        tools:layout="@layout/fragment_plans" />
+        tools:layout="@layout/fragment_me" />
+
 </navigation>
