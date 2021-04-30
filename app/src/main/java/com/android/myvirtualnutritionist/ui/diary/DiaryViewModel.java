@@ -10,7 +10,7 @@ public class DiaryViewModel extends ViewModel {
 
     public DiaryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is DIARY fragment");
+        mText.setValue("This is Diary fragment");
     }
 
     public LiveData<String> getText() {
