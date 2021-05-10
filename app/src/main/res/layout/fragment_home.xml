@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="@color/Gray"
-                android:text="@string/homeCaloriesRemaining"/>
+                android:text="@string/caloriesRemaining"/>
 
             <TextView
                 android:id="@+id/text_homeCaloriesCalc"
@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="@color/Gray"
-                android:text="@string/homeRecentActivities"/>
+                android:text="@string/recentActivities"/>
 
         </LinearLayout>
     </ScrollView>

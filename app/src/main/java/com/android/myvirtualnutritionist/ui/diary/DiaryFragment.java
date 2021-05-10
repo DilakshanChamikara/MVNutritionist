@@ -18,16 +18,24 @@ public class DiaryFragment extends Fragment {
 
     private DiaryViewModel diaryViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        diaryViewModel =
-                new ViewModelProvider(this).get(DiaryViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        diaryViewModel = new ViewModelProvider(this).get(DiaryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_diary, container, false);
-        final TextView textView = root.findViewById(R.id.text_diary);
-        diaryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+        final TextView textViewCalc = root.findViewById(R.id.text_diaryCaloriesCalc);
+        final TextView textViewDesc = root.findViewById(R.id.text_diaryCaloriesDesc);
+
+        diaryViewModel.getCaloriesCalc().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onChanged(String s) {
+                textViewCalc.setText(s);
+            }
+        });
+
+        diaryViewModel.getCaloriesDesc().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                textViewDesc.setText(s);
             }
         });
         return root;

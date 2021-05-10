@@ -6,6 +6,9 @@
     <string name="title_me">Me</string>
     <string name="title_notification">Notifications</string>
 
-    <string name="homeCaloriesRemaining">Calories Remaining</string>
-    <string name="homeRecentActivities">Recent Activities</string>
+    <string name="caloriesRemaining">Calories Remaining</string>
+    <string name="recentActivities">Recent Activities</string>
+
+    <string name="calorieGoals">Calorie Goals</string>
+
 </resources>
