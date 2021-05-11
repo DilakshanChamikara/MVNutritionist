@@ -50,7 +50,16 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textColor="@color/Gray"
-                android:text="@string/recentActivities"/>
+                android:text="@string/healthyTips"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/healthyTipsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
 
         </LinearLayout>
     </ScrollView>

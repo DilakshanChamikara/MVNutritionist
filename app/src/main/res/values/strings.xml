@@ -6,9 +6,15 @@
     <string name="title_me">Me</string>
     <string name="title_notification">Notifications</string>
 
+    <!--For Home Window-->
     <string name="caloriesRemaining">Calories Remaining</string>
-    <string name="recentActivities">Recent Activities</string>
+    <string name="healthyTips">Healthy Tips</string>
 
+    <!--For Diary Window-->
     <string name="calorieGoals">Calorie Goals</string>
+
+    <!--For Card View-->
+    <string name="tipTitle">Tip Title</string>
+    <string name="tipDescription">Tip Description</string>
 
 </resources>
