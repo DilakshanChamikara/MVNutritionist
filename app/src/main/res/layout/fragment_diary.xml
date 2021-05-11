@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:textColor="@color/Gray"
+            android:textColor="@color/black"
             android:text="@string/caloriesRemaining"/>
 
         <TextView
@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="30sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:paddingTop="10dp"/>
 
         <TextView
             android:id="@+id/text_diaryCaloriesDesc"
@@ -36,12 +37,13 @@
             android:textAlignment="center"
             android:textSize="12sp"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/Gray"/>
+            android:textColor="@color/Gray"
+            android:paddingBottom="12dp"/>
 
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1.5dp"
             android:background="?android:attr/listDivider"/>
 
         <TextView
@@ -49,7 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:textColor="@color/Gray"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/black"
             android:text="@string/calorieGoals"/>
 
     </LinearLayout>
