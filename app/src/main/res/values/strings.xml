@@ -12,6 +12,9 @@
 
     <!--For Diary Window-->
     <string name="calorieGoals">Calorie Goals</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
 
     <!--For Card View-->
     <string name="tipTitle">Tip Title</string>
