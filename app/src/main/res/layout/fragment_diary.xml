@@ -134,5 +134,161 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardMaxElevation="8dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lunchAddTitle"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/lunch"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lunchCountItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/lunchAddTitle"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:text="999"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/lunchCardDivider"
+                    android:layout_below="@+id/lunchAddTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="?android:attr/listDivider"/>
+
+                <ImageView
+                    android:id="@+id/lunchAddImage"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_below="@+id/lunchCardDivider"
+                    android:contentDescription="@string/addFood"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <TextView
+                    android:id="@+id/lunchAddFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lunchCardDivider"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/lunchAddImage"
+                    android:drawablePadding="2dp"
+                    android:text="@string/addFood" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardMaxElevation="8dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dinnerAddTitle"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/dinner"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dinnerCountItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/dinnerAddTitle"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="10dp"
+                    android:text="999"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/dinnerCardDivider"
+                    android:layout_below="@+id/dinnerAddTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="?android:attr/listDivider"/>
+
+                <ImageView
+                    android:id="@+id/dinnerAddImage"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_below="@+id/dinnerCardDivider"
+                    android:contentDescription="@string/addFood"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <TextView
+                    android:id="@+id/dinnerAddFood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dinnerCardDivider"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/dinnerAddImage"
+                    android:drawablePadding="2dp"
+                    android:text="@string/addFood" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 </ScrollView>
