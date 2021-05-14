@@ -25,6 +25,11 @@ public class DiaryFragment extends Fragment {
         final TextView textViewCalc = root.findViewById(R.id.text_diaryCaloriesCalc);
         final TextView textViewDesc = root.findViewById(R.id.text_diaryCaloriesDesc);
 
+        final TextView textViewBreakfastIC = root.findViewById(R.id.text_breakfastCountItems);
+        final TextView textViewLunchIC = root.findViewById(R.id.text_lunchCountItems);
+        final TextView textViewDinnerIC = root.findViewById(R.id.text_dinnerCountItems);
+
+
         diaryViewModel.getCaloriesCalc().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String s) {
@@ -36,6 +41,27 @@ public class DiaryFragment extends Fragment {
             @Override
             public void onChanged(String s) {
                 textViewDesc.setText(s);
+            }
+        });
+
+        diaryViewModel.getBreakfastCountItems().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                textViewBreakfastIC.setText(s);
+            }
+        });
+
+        diaryViewModel.getLunchCountItems().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                textViewLunchIC.setText(s);
+            }
+        });
+
+        diaryViewModel.getDinnerCountItems().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                textViewDinnerIC.setText(s);
             }
         });
         return root;

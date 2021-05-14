@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/breakfastAddTitle"
+                    android:id="@+id/text_breakfastAddTitle"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -84,17 +84,16 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/breakfastCountItems"
+                    android:id="@+id/text_breakfastCountItems"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_toEndOf="@+id/breakfastAddTitle"
+                    android:layout_toEndOf="@+id/text_breakfastAddTitle"
                     android:paddingStart="0dp"
                     android:paddingEnd="10dp"
-                    android:text="999"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -102,7 +101,7 @@
 
                 <View
                     android:id="@+id/breakfastCardDivider"
-                    android:layout_below="@+id/breakfastAddTitle"
+                    android:layout_below="@+id/text_breakfastAddTitle"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginLeft="10dp"
@@ -122,7 +121,7 @@
                     android:src="@drawable/ic_baseline_add_24" />
 
                 <TextView
-                    android:id="@+id/breakfastAddFood"
+                    android:id="@+id/text_breakfastAddFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/breakfastCardDivider"
@@ -150,7 +149,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/lunchAddTitle"
+                    android:id="@+id/text_lunchAddTitle"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -162,17 +161,16 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lunchCountItems"
+                    android:id="@+id/text_lunchCountItems"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_toEndOf="@+id/lunchAddTitle"
+                    android:layout_toEndOf="@+id/text_lunchAddTitle"
                     android:paddingStart="0dp"
                     android:paddingEnd="10dp"
-                    android:text="999"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -180,7 +178,7 @@
 
                 <View
                     android:id="@+id/lunchCardDivider"
-                    android:layout_below="@+id/lunchAddTitle"
+                    android:layout_below="@+id/text_lunchAddTitle"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginLeft="10dp"
@@ -200,7 +198,7 @@
                     android:src="@drawable/ic_baseline_add_24" />
 
                 <TextView
-                    android:id="@+id/lunchAddFood"
+                    android:id="@+id/text_lunchAddFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lunchCardDivider"
@@ -228,7 +226,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/dinnerAddTitle"
+                    android:id="@+id/text_dinnerAddTitle"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -240,17 +238,16 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/dinnerCountItems"
+                    android:id="@+id/text_dinnerCountItems"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_toEndOf="@+id/dinnerAddTitle"
+                    android:layout_toEndOf="@+id/text_dinnerAddTitle"
                     android:paddingStart="0dp"
                     android:paddingEnd="10dp"
-                    android:text="999"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -258,7 +255,7 @@
 
                 <View
                     android:id="@+id/dinnerCardDivider"
-                    android:layout_below="@+id/dinnerAddTitle"
+                    android:layout_below="@+id/text_dinnerAddTitle"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginLeft="10dp"
@@ -278,7 +275,7 @@
                     android:src="@drawable/ic_baseline_add_24" />
 
                 <TextView
-                    android:id="@+id/dinnerAddFood"
+                    android:id="@+id/text_dinnerAddFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dinnerCardDivider"
