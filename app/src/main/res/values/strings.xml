@@ -15,6 +15,7 @@
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
+    <string name="addFood">Add Food</string>
 
     <!--For Card View-->
     <string name="tipTitle">Tip Title</string>
