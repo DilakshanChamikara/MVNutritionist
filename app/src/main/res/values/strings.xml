@@ -21,5 +21,10 @@
     <!--For Card View-->
     <string name="tipTitle">Tip Title</string>
     <string name="tipDescription">Tip Description</string>
+    <string name="title_activity_nutrition_main">NutritionMain</string>
+
+    <!--For Tabbed Activity-->
+    <string name="nutritionTab_text_1">Calories</string>
+    <string name="nutritionTab_text_2">Nutrients</string>
 
 </resources>
