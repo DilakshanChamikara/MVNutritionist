@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyVirtualNutritionist">
+
         <activity
             android:name=".ui.diary.nutrition.NutritionMainActivity"
             android:label="@string/title_activity_nutrition_main"
-            android:theme="@style/Theme.MyVirtualNutritionist.NoActionBar"></activity>
+            android:theme="@style/Theme.MyVirtualNutritionist.NoActionBar"
+            android:parentActivityName=".MainActivity"/>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -22,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
