@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:padding="6dp"
     tools:context=".ui.diary.nutrition.NutrientsFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/nutrientsTable"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/nutritionTab_text_2"
-        android:textSize="30sp"/>
+        android:layout_margin="8dp"
+        android:stretchColumns="1,2,3,4">
 
-</LinearLayout>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tableHeaderNutrients"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="                     "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tableHeaderTotal"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/tableTotal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tableHeaderGoal"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/tableGoal"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tableHeaderLeft"
+                android:layout_column="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/tableLeft"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tableBodyRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </TableLayout>
+
+</ScrollView>
