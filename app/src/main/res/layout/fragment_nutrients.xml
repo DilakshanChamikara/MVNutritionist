@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="6dp"
     tools:context=".ui.diary.nutrition.NutrientsFragment">
 
     <TableLayout
         android:id="@+id/nutrientsTable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="5dp"
         android:stretchColumns="1,2,3,4">
 
         <TableRow>
@@ -19,7 +18,7 @@
             <TextView
                 android:id="@+id/tableHeaderNutrients"
                 android:layout_column="1"
-                android:gravity="center"
+                android:gravity="start"
                 android:padding="10dp"
                 android:text="                     "
                 android:textSize="16sp"

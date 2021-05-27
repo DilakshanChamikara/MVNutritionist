@@ -51,6 +51,13 @@ public class NutrientsFragment extends Fragment {
         dataModelList.add(new NutrientsTableDataModel("Fiber", "0g", "38g", "38g"));
         dataModelList.add(new NutrientsTableDataModel("Sugar", "0g", "78g", "78g"));
         dataModelList.add(new NutrientsTableDataModel("Fat", "0g", "69g", "69g"));
+        dataModelList.add(new NutrientsTableDataModel("Saturated", "0g", "104g", "104g"));
+        dataModelList.add(new NutrientsTableDataModel("Polyunsaturated", "0g", "1259g", "1259g"));
+        dataModelList.add(new NutrientsTableDataModel("Monounsaturated", "0g", "38g", "38g"));
+        dataModelList.add(new NutrientsTableDataModel("Trans", "0g", "78g", "78g"));
+        dataModelList.add(new NutrientsTableDataModel("Cholesterol", "0g", "69g", "69g"));
+        dataModelList.add(new NutrientsTableDataModel("Sodium", "0g", "78g", "78g"));
+        dataModelList.add(new NutrientsTableDataModel("Potassium", "0g", "69g", "69g"));
 
         return dataModelList;
     }
