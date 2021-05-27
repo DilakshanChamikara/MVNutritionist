@@ -27,4 +27,9 @@
     <string name="nutritionTab_text_1">Calories</string>
     <string name="nutritionTab_text_2">Nutrients</string>
 
+    <!--For Calories Window-->
+    <string name="totalCalories">Total Calories</string>
+    <string name="netCalories">Net Calories</string>
+    <string name="goal">Goal</string>
+
 </resources>

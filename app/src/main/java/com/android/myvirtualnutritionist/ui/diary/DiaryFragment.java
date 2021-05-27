@@ -78,6 +78,7 @@ public class DiaryFragment extends Fragment {
                 startActivity(i);
             }
         });
+
         return root;
     }
 }
