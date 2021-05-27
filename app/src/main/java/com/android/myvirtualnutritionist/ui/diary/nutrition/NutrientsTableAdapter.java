@@ -1,5 +1,6 @@
 package com.android.myvirtualnutritionist.ui.diary.nutrition;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -8,7 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 public class NutrientsTableAdapter extends RecyclerView.Adapter<NutrientsTableAdapter.ViewHolder> {
+
+    Context context;
+    List<NutrientsTableDataModel> nutrients_dataList;
+
+    public NutrientsTableAdapter(Context context, List<NutrientsTableDataModel> nutrients_dataList) {
+        this.context = context;
+        this.nutrients_dataList = nutrients_dataList;
+    }
+
     @NonNull
     @NotNull
     @Override
