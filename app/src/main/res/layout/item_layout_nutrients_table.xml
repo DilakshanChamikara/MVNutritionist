@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3,4">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow>
+
+        <TextView
+            android:id="@+id/tableBodyDataNutrients"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="                     "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tableBodyDataTotal"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/tableTotal"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tableBodyDataGoal"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/tableGoal"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tableBodyDataLeft"
+            android:layout_column="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/tableLeft"
+            android:textSize="16sp"/>
+
+    </TableRow>
+
+</TableLayout>
