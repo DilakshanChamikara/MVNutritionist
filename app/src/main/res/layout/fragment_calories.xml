@@ -15,8 +15,10 @@
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pieChart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="330dp"
+            android:layout_height="330dp"
+
+            android:layout_marginBottom="6dp" />
 
         <View
             android:id="@+id/totalDivider"
@@ -37,9 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:textColor="@color/black"
-            android:paddingTop="10dp"/>
+            android:layout_marginBottom="6dp"/>
 
         <View
             android:id="@+id/netDivider"
@@ -60,9 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:textColor="@color/black"
-            android:paddingTop="10dp"/>
+            android:layout_marginBottom="6dp"/>
 
         <View
             android:id="@+id/goalDivider"
@@ -83,9 +85,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:textColor="@color/black"
-            android:paddingTop="10dp"/>
+            android:layout_marginBottom="6dp"/>
 
     </LinearLayout>
 </ScrollView>

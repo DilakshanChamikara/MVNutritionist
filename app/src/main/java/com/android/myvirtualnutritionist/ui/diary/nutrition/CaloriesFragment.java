@@ -42,15 +42,15 @@ public class CaloriesFragment extends Fragment {
 
         ArrayList<PieEntry> pieCalories = new ArrayList<>();
 
-        pieCalories.add(new PieEntry(252, "2006"));
-        pieCalories.add(new PieEntry(245, "2007"));
-        pieCalories.add(new PieEntry(255, "2008"));
-        pieCalories.add(new PieEntry(275, "2009"));
+        pieCalories.add(new PieEntry(350, "Breakfast"));
+        pieCalories.add(new PieEntry(450, "Lunch"));
+        pieCalories.add(new PieEntry(250, "Dinner"));
+        pieCalories.add(new PieEntry(100, "Others"));
 
         PieDataSet pieDataSet = new PieDataSet(pieCalories, "Calories");
         pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
         pieDataSet.setValueTextColor(Color.BLACK);
-        pieDataSet.setValueTextSize(16f);
+        pieDataSet.setValueTextSize(25f);
 
         PieData pieData = new PieData(pieDataSet);
 
