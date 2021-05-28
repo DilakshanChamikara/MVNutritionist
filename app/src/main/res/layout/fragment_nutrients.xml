@@ -17,6 +17,7 @@
 
             <TextView
                 android:id="@+id/tableHeaderNutrients"
+                android:layout_width="140dp"
                 android:layout_column="1"
                 android:gravity="start"
                 android:padding="10dp"
@@ -26,6 +27,7 @@
 
             <TextView
                 android:id="@+id/tableHeaderTotal"
+                android:layout_width="50dp"
                 android:layout_column="1"
                 android:gravity="center"
                 android:padding="10dp"
@@ -35,6 +37,7 @@
 
             <TextView
                 android:id="@+id/tableHeaderGoal"
+                android:layout_width="50dp"
                 android:layout_column="1"
                 android:gravity="center"
                 android:padding="10dp"
@@ -44,6 +47,7 @@
 
             <TextView
                 android:id="@+id/tableHeaderLeft"
+                android:layout_width="50dp"
                 android:layout_column="1"
                 android:gravity="center"
                 android:padding="10dp"
