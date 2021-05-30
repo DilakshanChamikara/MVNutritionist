@@ -1,19 +1,18 @@
 package com.android.myvirtualnutritionist.ui.plans;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class PlansViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    private MutableLiveData<String> availablePlans;
 
     public PlansViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is Plans fragment");
+        availablePlans = new MutableLiveData<>();
+        availablePlans.setValue("Available Plans");
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public MutableLiveData<String> getAvailablePlans() {
+        return availablePlans;
     }
 }

@@ -18,7 +18,7 @@
     <string name="addFood">Add Food</string>
     <string name="nutrition">Nutrition</string>
 
-    <!--For Card View-->
+    <!--For Home Window (Card View)-->
     <string name="tipTitle">Tip Title</string>
     <string name="tipDescription">Tip Description</string>
     <string name="title_activity_nutrition_main">NutritionMain</string>
@@ -37,7 +37,9 @@
     <string name="tableGoal">Goal</string>
     <string name="tableLeft">Left</string>
 
-    <!--For Plans Window-->
-    <string name="availablePlans">Available Plans</string>
+    <!--For Plans Window (Card View)-->
+    <string name="planTitle">Plan Title</string>
+    <string name="planDate">Date</string>
+    <string name="planStatus">Status</string>
 
 </resources>
