@@ -18,11 +18,10 @@ public class MeFragment extends Fragment {
 
     private MeViewModel meViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        meViewModel =
-                new ViewModelProvider(this).get(MeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_plans, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        meViewModel = new ViewModelProvider(this).get(MeViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_me, container, false);
+
         final TextView textView = root.findViewById(R.id.text_me);
         meViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -30,6 +29,7 @@ public class MeFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 }
