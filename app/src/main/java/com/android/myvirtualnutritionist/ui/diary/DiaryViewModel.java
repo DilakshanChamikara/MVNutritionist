@@ -38,15 +38,15 @@ public class DiaryViewModel extends ViewModel {
         return caloriesDesc;
     }
 
-    public MutableLiveData<String> getBreakfastCountItems() {
+    public LiveData<String> getBreakfastCountItems() {
         return breakfastCountItems;
     }
 
-    public MutableLiveData<String> getLunchCountItems() {
+    public LiveData<String> getLunchCountItems() {
         return lunchCountItems;
     }
 
-    public MutableLiveData<String> getDinnerCountItems() {
+    public LiveData<String> getDinnerCountItems() {
         return dinnerCountItems;
     }
 }

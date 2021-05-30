@@ -1,5 +1,6 @@
 package com.android.myvirtualnutritionist.ui.plans;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -12,7 +13,7 @@ public class PlansViewModel extends ViewModel {
         availablePlans.setValue("Available Plans");
     }
 
-    public MutableLiveData<String> getAvailablePlans() {
+    public LiveData<String> getAvailablePlans() {
         return availablePlans;
     }
 }

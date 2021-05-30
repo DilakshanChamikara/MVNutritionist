@@ -1,22 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:layout_marginBottom="50dp"
     tools:context=".ui.me.MeFragment">
 
-    <TextView
-        android:id="@+id/text_me"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/profile"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_account_circle_24"/>
+
+        <!--        Profile-->
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="35dp"
+            android:layout_toEndOf="@id/profilePic"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <!--        Status-->
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/profilePic"
+            android:layout_below="@+id/profile"
+            android:text="@string/status"
+            android:textSize="14sp" />
+
+        <!--        PersonalInformation-->
+        <TextView
+            android:id="@+id/personalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/profilePic"
+            android:text="@string/personalInfo"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <!--        FirstName-->
+        <TextView
+            android:id="@+id/fName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/personalInfo"
+            android:text="@string/fName"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/personalInfo"
+            android:layout_toEndOf="@+id/fName"
+            android:text="@string/fName"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerFName"
+            android:layout_below="@+id/fName"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <!--        LastName-->
+        <TextView
+            android:id="@+id/lName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerFName"
+            android:text="@string/lName"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerFName"
+            android:layout_toEndOf="@+id/fName"
+            android:text="@string/lName"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerLName"
+            android:layout_below="@+id/lName"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <!--        Age-->
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerLName"
+            android:text="@string/age"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerLName"
+            android:layout_toEndOf="@+id/age"
+            android:text="@string/age"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerAge"
+            android:layout_below="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <!--        Gender-->
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerAge"
+            android:text="@string/gender"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerAge"
+            android:layout_toEndOf="@+id/gender"
+            android:text="@string/gender"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerGender"
+            android:layout_below="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <!--        DiseaseType-->
+        <TextView
+            android:id="@+id/diseaseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerGender"
+            android:text="@string/diseaseType"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meDiseaseType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerGender"
+            android:layout_toEndOf="@+id/diseaseType"
+            android:text="@string/diseaseType"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerDiseaseType"
+            android:layout_below="@+id/diseaseType"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <!--        Height-->
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerDiseaseType"
+            android:text="@string/height"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerDiseaseType"
+            android:layout_toEndOf="@+id/height"
+            android:text="@string/height"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerHeight"
+            android:layout_below="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+        <!--        Weight-->
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerHeight"
+            android:text="@string/weight"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_meWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/InfoDividerHeight"
+            android:layout_toEndOf="@+id/weight"
+            android:text="@string/weight"
+            android:textAlignment="textEnd"
+            android:padding="10dp"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/InfoDividerWeight"
+            android:layout_below="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="?android:attr/listDivider"/>
+
+    </RelativeLayout>
+</ScrollView>

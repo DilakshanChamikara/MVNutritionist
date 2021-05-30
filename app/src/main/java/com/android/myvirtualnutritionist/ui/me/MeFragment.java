@@ -22,11 +22,67 @@ public class MeFragment extends Fragment {
         meViewModel = new ViewModelProvider(this).get(MeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_me, container, false);
 
-        final TextView textView = root.findViewById(R.id.text_me);
-        meViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView status = root.findViewById(R.id.status);
+        meViewModel.getStatus().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+                status.setText(s);
+            }
+        });
+
+        final TextView fName = root.findViewById(R.id.text_meFirstName);
+        meViewModel.getfName().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                fName.setText(s);
+            }
+        });
+
+        final TextView lName = root.findViewById(R.id.text_meLastName);
+        meViewModel.getlName().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                lName.setText(s);
+            }
+        });
+
+        final TextView age = root.findViewById(R.id.text_meAge);
+        meViewModel.getAge().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                age.setText(s);
+            }
+        });
+
+        final TextView gender = root.findViewById(R.id.text_meGender);
+        meViewModel.getGender().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                gender.setText(s);
+            }
+        });
+
+        final TextView diseaseType = root.findViewById(R.id.text_meDiseaseType);
+        meViewModel.getDiseaseType().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                diseaseType.setText(s);
+            }
+        });
+
+        final TextView height = root.findViewById(R.id.text_meHeight);
+        meViewModel.getHeight().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                height.setText(s);
+            }
+        });
+
+        final TextView weight = root.findViewById(R.id.text_meWeight);
+        meViewModel.getWeight().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                weight.setText(s);
             }
         });
 
