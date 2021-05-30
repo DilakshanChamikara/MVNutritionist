@@ -23,7 +23,7 @@ public class PlansFragment extends Fragment {
         plansViewModel =
                 new ViewModelProvider(this).get(PlansViewModel.class);
         View root = inflater.inflate(R.layout.fragment_plans, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
+        final TextView textView = root.findViewById(R.id.text_plans);
         plansViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
