@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.android.myvirtualnutritionist.R;
+
 public class MeViewModel extends ViewModel {
 
+    private MutableLiveData<Integer> meProfilePic;
     private MutableLiveData<String> status;
     private MutableLiveData<String> fName;
     private MutableLiveData<String> lName;
@@ -16,8 +19,11 @@ public class MeViewModel extends ViewModel {
     private MutableLiveData<String> weight;
 
     public MeViewModel() {
+        meProfilePic = new MutableLiveData<>();
+        meProfilePic.setValue(R.drawable.profile);
+
         status = new MutableLiveData<>();
-        status.setValue("Feeling Awesome");
+        status.setValue("Feeling Awesome ❤❤");
 
         fName = new MutableLiveData<>();
         fName.setValue("Geethma");
@@ -39,6 +45,10 @@ public class MeViewModel extends ViewModel {
 
         weight = new MutableLiveData<>();
         weight.setValue("52");
+    }
+
+    public LiveData<Integer> getMeProfilePic() {
+        return meProfilePic;
     }
 
     public LiveData<String> getStatus() {

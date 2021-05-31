@@ -15,11 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.myvirtualnutritionist.R;
-import com.android.myvirtualnutritionist.ui.home.HealthyTipsDataModel;
-import com.android.myvirtualnutritionist.ui.home.HomeFragment;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class PlansFragment extends Fragment {
 

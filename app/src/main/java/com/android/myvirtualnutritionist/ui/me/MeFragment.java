@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,14 @@ public class MeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         meViewModel = new ViewModelProvider(this).get(MeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_me, container, false);
+
+        final ImageView meProfilePic = root.findViewById(R.id.profilePic);
+        meViewModel.getMeProfilePic().observe(getViewLifecycleOwner(), new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                meProfilePic.setImageResource(integer);
+            }
+        });
 
         final TextView status = root.findViewById(R.id.status);
         meViewModel.getStatus().observe(getViewLifecycleOwner(), new Observer<String>() {
