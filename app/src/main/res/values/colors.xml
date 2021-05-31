@@ -16,4 +16,16 @@
     <color name="icon_blue">#0483b4</color>
     <color name="icon_blue_dark">#0468b4</color>
     <color name="icon_blue_dark2">#0357a1</color>
+
+    <!--    Background Colour Set 1-->
+    <color name="set1primary1">#232F34</color>
+    <color name="set1primary2">#344995</color>
+    <color name="set1primary3">#4A6572</color>
+    <color name="set1secondary1">#F9AA33</color>
+
+    <!--    Background Colour Set 1-->
+    <color name="set2primary1">#442C2E</color>
+    <color name="set2primary2">#FEDBD0</color>
+    <color name="set2secondary1">#FEEAE6</color>
+
 </resources>
