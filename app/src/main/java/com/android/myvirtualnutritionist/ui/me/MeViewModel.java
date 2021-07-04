@@ -20,7 +20,7 @@ public class MeViewModel extends ViewModel {
 
     public MeViewModel() {
         meProfilePic = new MutableLiveData<>();
-        meProfilePic.setValue(R.drawable.profile);
+        meProfilePic.setValue(R.drawable.profilepic);
 
         status = new MutableLiveData<>();
         status.setValue("Feeling Awesome ❤❤");
