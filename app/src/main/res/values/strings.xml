@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MV Nutritionist</string>
+    <string name="app_longName">My Virtual Nutritionist</string>
     <string name="title_home">Home</string>
     <string name="title_diary">Diary</string>
     <string name="title_plans">Plans</string>
@@ -53,5 +54,10 @@
     <string name="weight">Weight (kg)</string>
     <string name="diseaseType">Disease Type</string>
     <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <!--For First Layout-->
+    <string name="goBtn">Go</string>
 
 </resources>
