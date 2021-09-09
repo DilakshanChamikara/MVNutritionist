@@ -8,7 +8,7 @@
     <string name="title_notification">Notifications</string>
 
     <!--For Home Window-->
-    <string name="caloriesRemaining">Calories Remaining</string>
+    <string name="BMRate">Basal Metabolic Rate (BMR)</string>
     <string name="healthyTips">Healthy Tips</string>
 
     <!--For Diary Window-->

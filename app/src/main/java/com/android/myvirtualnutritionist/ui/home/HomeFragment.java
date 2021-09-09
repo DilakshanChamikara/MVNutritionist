@@ -1,5 +1,6 @@
 package com.android.myvirtualnutritionist.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.myvirtualnutritionist.FirstActivity;
 import com.android.myvirtualnutritionist.R;
 
 import java.util.ArrayList;
@@ -30,6 +32,9 @@ public class HomeFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList<HealthyTipsDataModel> dataHolder;
 
+    String male = "Male";
+    String female = "Female";
+    int BMR = 0;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
@@ -38,12 +43,26 @@ public class HomeFragment extends Fragment {
         final TextView textViewCalc = root.findViewById(R.id.text_homeCaloriesCalc);
         final TextView textViewDesc = root.findViewById(R.id.text_homeCaloriesDesc);
 
-        homeViewModel.getCaloriesCalc().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                textViewCalc.setText(s);
-            }
-        });
+        Intent intent = getActivity().getIntent();
+        int passedAgeValue = intent.getIntExtra(FirstActivity.EXTRA_AGE, 0);
+        double passedHeightCM = intent.getDoubleExtra(FirstActivity.EXTRA_HEIGHT, 0);
+        double passedWeightKG = intent.getDoubleExtra(FirstActivity.EXTRA_WEIGHT, 0);
+        String passedGender = intent.getStringExtra(FirstActivity.EXTRA_GENDER);
+
+        /**
+         * Basal Metabolic Rate (BMR)
+         * Mifflin-St Jeor Equation:
+         * For men:
+         * BMR = 10W + 6.25H - 5A + 5
+         * For women:
+         * BMR = 10W + 6.25H - 5A - 161
+         * **/
+        if (male.equals(passedGender))
+            BMR = (int) (((10 * passedWeightKG) + (6.25 * passedHeightCM) - (5 * passedAgeValue) + 5) + 0.5);
+        if (female.equals(passedGender))
+            BMR = (int) (((10 * passedWeightKG) + (6.25 * passedHeightCM) - (5 * passedAgeValue) - 161) + 0.5);
+
+        textViewCalc.setText("" + BMR + "");
 
         homeViewModel.getCaloriesDesc().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

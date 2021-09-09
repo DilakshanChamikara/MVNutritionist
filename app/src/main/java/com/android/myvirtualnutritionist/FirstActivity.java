@@ -2,7 +2,6 @@ package com.android.myvirtualnutritionist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,14 +14,21 @@ import android.widget.Toast;
 
 public class FirstActivity extends AppCompatActivity {
 
+    public static final String EXTRA_AGE = "com.android.myvirtualnutritionist.EXTRA_AGE";
+    public static final String EXTRA_HEIGHT = "com.android.myvirtualnutritionist.EXTRA_HEIGHT";
+    public static final String EXTRA_WEIGHT = "com.android.myvirtualnutritionist.EXTRA_WEIGHT";
+    public static final String EXTRA_GENDER = "com.android.myvirtualnutritionist.EXTRA_GENDER";
+
     private Button btnGo;
     private EditText age, height, weight;
 
+    private RadioGroup rg;
     private RadioButton male, female;
     int gender, ageValue;
+    String genderMale, genderFemale;
 
     double heightCM, heightM, weightKG;
-    Double BMI = 0.0;
+    double BMI = 0.0;
     int BMR = 0;
 
     @Override
@@ -31,6 +37,7 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
 
         age = (EditText) findViewById(R.id.editTextAgeFirst);
+        rg = (RadioGroup) findViewById(R.id.radioGroupGender);
         male = (RadioButton) findViewById(R.id.radioMaleFirst);
         female = (RadioButton) findViewById(R.id.radioFemaleFirst);
         height = (EditText) findViewById(R.id.editTextHeightFirst);
@@ -47,21 +54,39 @@ public class FirstActivity extends AppCompatActivity {
                 else if (weight.getText().toString().length() == 0)
                     weight.setError("Weight is required!");
                 else {
-                    heightCM = Double.parseDouble(height.getText().toString());
-                    weightKG = Double.parseDouble(weight.getText().toString());
-
-                    Intent intent = new Intent(FirstActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    calcBmrMifflinEq();
+                    openMainActivity();
                 }
             }
         });
 
-
-
     }
 
-   /** Body mass index **/
+    /**
+     * passing values to the main activity **/
+    public void openMainActivity(){
+        ageValue = Integer.parseInt(age.getText().toString());
+        heightCM = Double.parseDouble(height.getText().toString());
+        weightKG = Double.parseDouble(weight.getText().toString());
+        genderMale = String.valueOf(male.getText());
+        genderFemale = String.valueOf(female.getText());
+
+        Intent intent = new Intent(FirstActivity.this, MainActivity.class);
+        intent.putExtra(EXTRA_AGE, ageValue);
+        intent.putExtra(EXTRA_HEIGHT, heightCM);
+        intent.putExtra(EXTRA_WEIGHT, weightKG);
+
+        if (male.isChecked()){
+            intent.putExtra(EXTRA_GENDER, genderMale);
+        }
+        if (female.isChecked()){
+            intent.putExtra(EXTRA_GENDER, genderFemale);
+        }
+
+        startActivity(intent);
+    }
+
+   /**
+    * Body mass index **/
     public void calcBMI(){
         heightCM = Double.parseDouble(height.getText().toString());
         weightKG = Double.parseDouble(weight.getText().toString());
@@ -71,13 +96,14 @@ public class FirstActivity extends AppCompatActivity {
         Toast.makeText(getApplication().getApplicationContext(), "BMI is " + String.format("%.2f", BMI), Toast.LENGTH_LONG).show();
     }
 
-    /** For male female **/
+    /**
+     * For male female **/
     public void genderIdentifier() {
         if (male.isChecked()){
-            gender = 1;
+            gender = 0;
         }
         if (female.isChecked()){
-            gender = 0;
+            gender = 1;
         }
         Toast.makeText(getApplication().getApplicationContext(), "Gender is " + gender, Toast.LENGTH_LONG).show();
     }
