@@ -49,6 +49,8 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (age.getText().toString().length() == 0)
                     age.setError("Age is required!");
+//                else if (Integer.parseInt(age.getText().toString()) <= 15 && Integer.parseInt(age.getText().toString().trim()) >= 80)
+//                    age.setError("Please provide an age between 15 and 80.");
                 else if (height.getText().toString().length() == 0)
                     height.setError("Height is required!");
                 else if (weight.getText().toString().length() == 0)
