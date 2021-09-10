@@ -45,7 +45,8 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/profilePic"
             android:layout_below="@+id/profile"
-            android:text="@string/status"
+            android:hint="@string/status"
+            android:maxLines="1"
             android:textSize="14sp" />
 
         <!--        PersonalInformation-->
@@ -72,6 +73,7 @@
             android:text="@string/fName"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -83,8 +85,9 @@
             android:layout_marginEnd="10dp"
             android:layout_below="@+id/personalInfo"
             android:layout_toEndOf="@+id/fName"
-            android:text="@string/fName"
+            android:hint="@string/fName"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -107,6 +110,7 @@
             android:text="@string/lName"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -118,8 +122,9 @@
             android:layout_marginEnd="10dp"
             android:layout_below="@+id/InfoDividerFName"
             android:layout_toEndOf="@+id/fName"
-            android:text="@string/lName"
+            android:hint="@string/lName"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -142,6 +147,7 @@
             android:text="@string/age"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -155,6 +161,7 @@
             android:layout_toEndOf="@+id/age"
             android:text="@string/age"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -177,6 +184,7 @@
             android:text="@string/gender"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -190,6 +198,7 @@
             android:layout_toEndOf="@+id/gender"
             android:text="@string/gender"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -212,6 +221,7 @@
             android:text="@string/height"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -225,6 +235,7 @@
             android:layout_toEndOf="@+id/height"
             android:text="@string/height"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -247,6 +258,7 @@
             android:text="@string/weight"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -260,6 +272,7 @@
             android:layout_toEndOf="@+id/weight"
             android:text="@string/weight"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -282,6 +295,7 @@
             android:text="@string/bmi"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -295,6 +309,7 @@
             android:layout_toEndOf="@+id/bmi"
             android:text="@string/bmi"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -317,6 +332,7 @@
             android:text="@string/weightStatus"
             android:textColor="@color/black"
             android:textAlignment="textStart"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 
@@ -330,6 +346,7 @@
             android:layout_toEndOf="@+id/weightStatus"
             android:text="@string/weightStatus"
             android:textAlignment="textEnd"
+            android:maxLines="1"
             android:padding="10dp"
             android:textSize="18sp"/>
 

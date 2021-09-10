@@ -1,15 +1,18 @@
 package com.android.myvirtualnutritionist.ui.me;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -25,6 +28,9 @@ public class MeFragment extends Fragment {
     double BMI = 0.0;
     String BMIWeightStatus;
 
+    AlertDialog dialogStatus, dialogFName, dialogLName;
+    EditText editTextStatus, editTextFName, editTextLName;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         meViewModel = new ViewModelProvider(this).get(MeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_me, container, false);
@@ -37,27 +43,75 @@ public class MeFragment extends Fragment {
             }
         });
 
+        /**
+         * Textview for EditText
+         * For Profile Status**/
         final TextView status = root.findViewById(R.id.status);
-        meViewModel.getStatus().observe(getViewLifecycleOwner(), new Observer<String>() {
+        dialogStatus = new AlertDialog.Builder(getContext()).create();
+        editTextStatus = new EditText(getContext());
+        editTextStatus.setGravity(Gravity.CENTER);
+
+        dialogStatus.setTitle("Status (Optional)");
+        dialogStatus.setView(editTextStatus);
+        dialogStatus.setButton(DialogInterface.BUTTON_POSITIVE, "SAVE", new DialogInterface.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                status.setText(s);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                status.setText(editTextStatus.getText());
+            }
+        });
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextStatus.setText(status.getText());
+                dialogStatus.show();
             }
         });
 
+        /**
+         * Textview for EditText
+         * For First Name**/
         final TextView fName = root.findViewById(R.id.text_meFirstName);
-        meViewModel.getfName().observe(getViewLifecycleOwner(), new Observer<String>() {
+        dialogFName = new AlertDialog.Builder(getContext()).create();
+        editTextFName = new EditText(getContext());
+        editTextFName.setGravity(Gravity.CENTER);
+
+        dialogFName.setTitle("First Name");
+        dialogFName.setView(editTextFName);
+        dialogFName.setButton(DialogInterface.BUTTON_POSITIVE, "SAVE", new DialogInterface.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                fName.setText(s);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                fName.setText(editTextFName.getText());
+            }
+        });
+        fName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextFName.setText(fName.getText());
+                dialogFName.show();
             }
         });
 
+        /**
+        * Textview for EditText
+        * For Last Name**/
         final TextView lName = root.findViewById(R.id.text_meLastName);
-        meViewModel.getlName().observe(getViewLifecycleOwner(), new Observer<String>() {
+        dialogLName = new AlertDialog.Builder(getContext()).create();
+        editTextLName = new EditText(getContext());
+        editTextLName.setGravity(Gravity.CENTER);
+
+        dialogLName.setTitle("Last Name (Optional)");
+        dialogLName.setView(editTextLName);
+        dialogLName.setButton(DialogInterface.BUTTON_POSITIVE, "SAVE", new DialogInterface.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                lName.setText(s);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                lName.setText(editTextLName.getText());
+            }
+        });
+        lName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextLName.setText(lName.getText());
+                dialogLName.show();
             }
         });
 
