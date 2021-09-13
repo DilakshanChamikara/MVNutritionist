@@ -10,7 +10,7 @@ public class HomeViewModel extends ViewModel {
 
     public HomeViewModel() {
         caloriesDesc = new MutableLiveData<>();
-        caloriesDesc.setValue("Calories/day");
+        caloriesDesc.setValue("Daily Calories Need\t\t\t\t\t\t\t\t\tDaily Calorie Goal");
     }
 
     public LiveData<String> getCaloriesDesc(){

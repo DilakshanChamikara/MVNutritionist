@@ -14,7 +14,7 @@ public class DiaryViewModel extends ViewModel {
 
     public DiaryViewModel() {
         caloriesDesc = new MutableLiveData<>();
-        caloriesDesc.setValue("Calories/day");
+        caloriesDesc.setValue("Daily Calories Need\t\t\t\t\t\t\t\t\tDaily Calorie Goal");
 
         breakfastCountItems = new MutableLiveData<>();
         breakfastCountItems.setValue("999");

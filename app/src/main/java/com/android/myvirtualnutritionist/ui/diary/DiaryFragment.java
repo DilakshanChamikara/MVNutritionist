@@ -25,7 +25,12 @@ public class DiaryFragment extends Fragment {
 
     String male = "Male";
     String female = "Female";
-    int BMR = 0;
+    int actualNeedBMR = 0;
+    int goalBMR = 0;
+
+    double heightCM, heightM;
+    double calcWeight;
+    double constantBMI = 21.7;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         diaryViewModel = new ViewModelProvider(this).get(DiaryViewModel.class);
@@ -55,11 +60,28 @@ public class DiaryFragment extends Fragment {
          * BMR = 10W + 6.25H - 5A - 161
          * **/
         if (male.equals(passedGender))
-            BMR = (int) (((10 * passedWeightKG) + (6.25 * passedHeightCM) - (5 * passedAgeValue) + 5) + 0.5);
+            actualNeedBMR = (int) (((10 * passedWeightKG) + (6.25 * passedHeightCM) - (5 * passedAgeValue) + 5) + 0.5);
         if (female.equals(passedGender))
-            BMR = (int) (((10 * passedWeightKG) + (6.25 * passedHeightCM) - (5 * passedAgeValue) - 161) + 0.5);
+            actualNeedBMR = (int) (((10 * passedWeightKG) + (6.25 * passedHeightCM) - (5 * passedAgeValue) - 161) + 0.5);
 
-        textViewCalc.setText("" + BMR + "");
+        /**
+         * Calculate Weight using ideal Body mass index
+         * BMI = (weightKG / ((heightM) * (heightM)));
+         * **/
+        heightCM = passedHeightCM;
+        heightM = heightCM / 100;
+
+        calcWeight = (constantBMI * (heightM * heightM));
+
+        /**
+         * BMR Goal
+         * **/
+        if (male.equals(passedGender))
+            goalBMR = (int) (((10 * calcWeight) + (6.25 * passedHeightCM) - (5 * passedAgeValue) + 5) + 0.5);
+        if (female.equals(passedGender))
+            goalBMR = (int) (((10 * calcWeight) + (6.25 * passedHeightCM) - (5 * passedAgeValue) - 161) + 0.5);
+
+        textViewCalc.setText("" + actualNeedBMR + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + goalBMR);
 
         diaryViewModel.getCaloriesDesc().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
