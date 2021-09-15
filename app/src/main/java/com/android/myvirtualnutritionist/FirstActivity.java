@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,6 +58,28 @@ public class FirstActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /**
+         * start python
+         * if (!Python.isStarted()){
+         *             Python.start(new AndroidPlatform(this));
+         *         }
+         * **/
+
+        /**
+         * creating python instance
+         * Python python = Python.getInstance();
+         */
+
+        /**
+         * creating python object
+         * PyObject pyObject = python.getModule("myScript");
+         */
+
+        /**
+         * call the function
+         * PyObject pyObj = pyObject.callAttr("main");
+         */
 
     }
 
