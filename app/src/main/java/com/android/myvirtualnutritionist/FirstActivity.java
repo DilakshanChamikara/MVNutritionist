@@ -11,6 +11,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
+import com.chaquo.python.android.AndroidPlatform;
+
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -59,27 +63,6 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        /**
-         * start python
-         * if (!Python.isStarted()){
-         *             Python.start(new AndroidPlatform(this));
-         *         }
-         * **/
-
-        /**
-         * creating python instance
-         * Python python = Python.getInstance();
-         */
-
-        /**
-         * creating python object
-         * PyObject pyObject = python.getModule("myScript");
-         */
-
-        /**
-         * call the function
-         * PyObject pyObj = pyObject.callAttr("main");
-         */
 
     }
 
@@ -172,6 +155,44 @@ public class FirstActivity extends AppCompatActivity {
             BMR = (int) ((9.247 * weightKG) + (3.098 * heightCM) - (4.330 * ageValue) + 447.593);
         }
         Toast.makeText(getApplication().getApplicationContext(), "calories " + BMR, Toast.LENGTH_LONG).show();
+    }
+
+    /**
+     * integrate with chaquopy
+     */
+    public void pythonFun(){
+        /**
+         * start python
+         * **/
+        if (!Python.isStarted()){
+            Python.start(new AndroidPlatform(getApplication().getApplicationContext()));
+        }
+
+        /**
+         * creating python instance
+         */
+        Python python = Python.getInstance();
+
+        /**
+         * creating python object
+         * name of the file
+         */
+        PyObject pyObject = python.getModule("bmrCalculations");
+
+        String sex = "";
+        if (male.isChecked()){
+            sex = "Male";
+        }
+        if (female.isChecked()){
+            sex = "Female";
+        }
+
+        /**
+         * call the function
+         * "main" is function name, others are parameters of the function
+         */
+        PyObject pyObj = pyObject.callAttr("mifflinEq", age.getText().toString(), sex, height.getText().toString(), weight.getText().toString());
+        Toast.makeText(getApplication().getApplicationContext(), "" + pyObj.toString(), Toast.LENGTH_SHORT).show();
     }
 
 
