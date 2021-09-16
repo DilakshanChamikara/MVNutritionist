@@ -110,28 +110,29 @@
                     android:layout_marginRight="10dp"
                     android:background="?android:attr/listDivider"/>
 
-                <ImageView
-                    android:id="@+id/breakfastAddImage"
-                    android:layout_width="35dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_below="@+id/breakfastCardDivider"
-                    android:contentDescription="@string/addFood"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_baseline_add_24" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/breakfastAddImage"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:layout_marginStart="25dp"-->
+<!--                    android:layout_below="@+id/breakfastCardDivider"-->
+<!--                    android:contentDescription="@string/addFood"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:src="@drawable/ic_baseline_add_24" />-->
 
                 <TextView
                     android:id="@+id/text_breakfastAddFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/breakfastCardDivider"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_toEndOf="@id/breakfastAddImage"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:drawablePadding="2dp"
-                    android:text="@string/addFood" />
+                    android:hint="@string/addFood" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -187,28 +188,29 @@
                     android:layout_marginRight="10dp"
                     android:background="?android:attr/listDivider"/>
 
-                <ImageView
-                    android:id="@+id/lunchAddImage"
-                    android:layout_width="35dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_below="@+id/lunchCardDivider"
-                    android:contentDescription="@string/addFood"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_baseline_add_24" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/lunchAddImage"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:layout_marginStart="25dp"-->
+<!--                    android:layout_below="@+id/lunchCardDivider"-->
+<!--                    android:contentDescription="@string/addFood"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:src="@drawable/ic_baseline_add_24" />-->
 
                 <TextView
                     android:id="@+id/text_lunchAddFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/lunchCardDivider"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_toEndOf="@id/lunchAddImage"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:drawablePadding="2dp"
-                    android:text="@string/addFood" />
+                    android:hint="@string/addFood" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -264,28 +266,29 @@
                     android:layout_marginRight="10dp"
                     android:background="?android:attr/listDivider"/>
 
-                <ImageView
-                    android:id="@+id/dinnerAddImage"
-                    android:layout_width="35dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_below="@+id/dinnerCardDivider"
-                    android:contentDescription="@string/addFood"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_baseline_add_24" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/dinnerAddImage"-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_marginBottom="10dp"-->
+<!--                    android:layout_marginStart="25dp"-->
+<!--                    android:layout_below="@+id/dinnerCardDivider"-->
+<!--                    android:contentDescription="@string/addFood"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:src="@drawable/ic_baseline_add_24" />-->
 
                 <TextView
                     android:id="@+id/text_dinnerAddFood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dinnerCardDivider"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_toEndOf="@id/dinnerAddImage"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
                     android:drawablePadding="2dp"
-                    android:text="@string/addFood" />
+                    android:hint="@string/addFood" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 

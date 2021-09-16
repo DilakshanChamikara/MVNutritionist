@@ -1,11 +1,15 @@
 package com.android.myvirtualnutritionist.ui.diary;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -31,6 +35,9 @@ public class DiaryFragment extends Fragment {
     double heightCM, heightM;
     double calcWeight;
     double constantBMI = 21.7;
+
+    AlertDialog dialogBreakfast, dialogLunch, dialogDinner;
+    EditText editTextBreakfast, editTextLunch, editTextDinner;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         diaryViewModel = new ViewModelProvider(this).get(DiaryViewModel.class);
@@ -90,24 +97,75 @@ public class DiaryFragment extends Fragment {
             }
         });
 
-        diaryViewModel.getBreakfastCountItems().observe(getViewLifecycleOwner(), new Observer<String>() {
+        /**
+         * Textview for EditText
+         * For Add Food Breakfast**/
+        final TextView addFoodB = root.findViewById(R.id.text_breakfastAddFood);
+        dialogBreakfast = new AlertDialog.Builder(getContext()).create();
+        editTextBreakfast = new EditText(getContext());
+        editTextBreakfast.setGravity(Gravity.CENTER);
+
+        dialogBreakfast.setTitle("Add Foods for Breakfast");
+        dialogBreakfast.setView(editTextBreakfast);
+        dialogBreakfast.setButton(DialogInterface.BUTTON_POSITIVE, "SAVE", new DialogInterface.OnClickListener() {
             @Override
-            public void onChanged(String s) {
-                textViewBreakfastIC.setText(s);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                addFoodB.setText(editTextBreakfast.getText());
+            }
+        });
+        addFoodB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextBreakfast.setText(addFoodB.getText());
+                dialogBreakfast.show();
             }
         });
 
-        diaryViewModel.getLunchCountItems().observe(getViewLifecycleOwner(), new Observer<String>() {
+        /**
+         * Textview for EditText
+         * For Add Food Lunch**/
+        final TextView addFoodL = root.findViewById(R.id.text_lunchAddFood);
+        dialogLunch = new AlertDialog.Builder(getContext()).create();
+        editTextLunch = new EditText(getContext());
+        editTextLunch.setGravity(Gravity.CENTER);
+
+        dialogLunch.setTitle("Add Foods for Lunch");
+        dialogLunch.setView(editTextLunch);
+        dialogLunch.setButton(DialogInterface.BUTTON_POSITIVE, "SAVE", new DialogInterface.OnClickListener() {
             @Override
-            public void onChanged(String s) {
-                textViewLunchIC.setText(s);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                addFoodL.setText(editTextLunch.getText());
+            }
+        });
+        addFoodL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextLunch.setText(addFoodL.getText());
+                dialogLunch.show();
             }
         });
 
-        diaryViewModel.getDinnerCountItems().observe(getViewLifecycleOwner(), new Observer<String>() {
+        /**
+         * Textview for EditText
+         * For Add Food Dinner**/
+        final TextView addFoodD = root.findViewById(R.id.text_dinnerAddFood);
+        dialogDinner = new AlertDialog.Builder(getContext()).create();
+        editTextDinner = new EditText(getContext());
+        editTextDinner.setGravity(Gravity.CENTER);
+
+        dialogDinner.setTitle("Add Foods for Dinner");
+        dialogDinner.setView(editTextDinner);
+        dialogDinner.setButton(DialogInterface.BUTTON_POSITIVE, "SAVE", new DialogInterface.OnClickListener() {
             @Override
-            public void onChanged(String s) {
-                textViewDinnerIC.setText(s);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                addFoodD.setText(editTextDinner.getText());
+            }
+        });
+        addFoodD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editTextDinner.setText(addFoodD.getText());
+                dialogDinner.show();
             }
         });
 
