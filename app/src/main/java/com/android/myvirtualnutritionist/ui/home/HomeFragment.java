@@ -16,12 +16,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.myvirtualnutritionist.FirstActivity;
 import com.android.myvirtualnutritionist.R;
+import com.android.myvirtualnutritionist.ui.me.MeFragment;
 
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+
+    public static final String EXTRA_BMRNEED = "com.android.myvirtualnutritionist.ui.home.EXTRA_BMRNEED";
+    public static final String EXTRA_BMRGOAL = "com.android.myvirtualnutritionist.ui.home.EXTRA_BMRGOAL";
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -85,6 +89,13 @@ public class HomeFragment extends Fragment {
             goalBMR = (int) (((10 * calcWeight) + (6.25 * passedHeightCM) - (5 * passedAgeValue) - 161) + 0.5);
 
         textViewCalc.setText("" + actualNeedBMR + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + goalBMR);
+        /**
+         * passing values to the me fragment
+         */
+//        Intent intent1 = new Intent(getActivity().getApplicationContext(), MeFragment.class);
+//        intent1.putExtra(EXTRA_BMRNEED, actualNeedBMR);
+//        intent1.putExtra(EXTRA_BMRGOAL, goalBMR);
+//        startActivity(intent1);
 
         homeViewModel.getCaloriesDesc().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

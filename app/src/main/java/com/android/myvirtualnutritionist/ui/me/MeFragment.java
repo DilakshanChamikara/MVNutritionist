@@ -19,6 +19,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.android.myvirtualnutritionist.FirstActivity;
 import com.android.myvirtualnutritionist.R;
+import com.android.myvirtualnutritionist.database.DBHandler;
+import com.android.myvirtualnutritionist.ui.home.HomeFragment;
 
 public class MeFragment extends Fragment {
 
@@ -127,6 +129,8 @@ public class MeFragment extends Fragment {
         double passedHeightCM = intent.getDoubleExtra(FirstActivity.EXTRA_HEIGHT, 0);
         double passedWeightKG = intent.getDoubleExtra(FirstActivity.EXTRA_WEIGHT, 0);
         String passedGender = intent.getStringExtra(FirstActivity.EXTRA_GENDER);
+//        int passedBmrNeed = intent.getIntExtra(HomeFragment.EXTRA_BMRNEED, 0);
+//        int passedBmrGoal = intent.getIntExtra(HomeFragment.EXTRA_BMRGOAL, 0);
 
         /**
          * Body mass index **/
@@ -157,6 +161,16 @@ public class MeFragment extends Fragment {
         weight.setText("" + passedWeightKG);
         textBmi.setText("" + String.format("%.2f", BMI));
         weightStatus.setText(BMIWeightStatus);
+
+        /**
+         * Connect to the SQLite
+         */
+//        DBHandler dbHandler = new DBHandler(getActivity().getApplicationContext());
+//        long newID = dbHandler.addInfo("user1", "feeling awesome", "ab12", editTextFName.getText().toString(), editTextLName.getText().toString(), passedAgeValue, passedGender, passedHeightCM, passedWeightKG, BMI, BMIWeightStatus, passedBmrNeed, passedBmrGoal);
+//        Toast.makeText(getActivity().getApplicationContext(), "User " + newID + " added.", Toast.LENGTH_SHORT).show();
+//
+//        Intent i = new Intent(getActivity().getApplicationContext(), HomeFragment.class);
+//        startActivity(i);
 
         return root;
     }
